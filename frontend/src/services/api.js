@@ -97,7 +97,7 @@ export const updateTask = async (id, updatedData) => {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch(`http://localhost:3000/api/tasks/${id}`, {
+    const res = await fetch(`${BASE_URL}/api/tasks/${id}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
@@ -143,7 +143,7 @@ export const getUserInfo = async () => {
   try {
     const token = localStorage.getItem("token");
 
-    const res = await fetch("http://localhost:3000/api/home/welcome", {
+    const res = await fetch(`${BASE_URL}/api/home/welcome`, {
       headers: {
         Authorization: `Bearer ${token}`,
       },
