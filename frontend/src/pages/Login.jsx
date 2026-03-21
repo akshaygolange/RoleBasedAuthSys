@@ -1,54 +1,3 @@
-// import React, { useState } from "react";
-// import { loginUser } from "../services/api";
-// import { useNavigate } from "react-router-dom";
-
-// const Login = () => {
-//   const [username, setUsername] = useState("");
-//   const [password, setPassword] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleLogin = async () => {
-//     try {
-//       const data = await loginUser({ username, password });
-
-//       localStorage.setItem("token", data.accessToken);
-
-//       alert("Login successful ✅");
-//       navigate("/dashboard");
-//     } catch (err) {
-//       alert(err.message);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Login</h2>
-
-//       <input
-//         placeholder="Username"
-//         onChange={(e) => setUsername(e.target.value)}
-//       />
-//       <br />
-
-//       <input
-//         type="password"
-//         placeholder="Password"
-//         onChange={(e) => setPassword(e.target.value)}
-//       />
-//       <br />
-
-//       <button onClick={handleLogin}>Login</button>
-//     </div>
-//   );
-// };
-
-// export default Login;
-
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { loginUser } from "../services/api";
 import { useNavigate, Link } from "react-router-dom";
@@ -99,7 +48,10 @@ const Login = () => {
         </button>
 
         <p className="text-sm mt-3 text-center">
-          New user? <Link className="text-blue-500" to="/register">Register</Link>
+          New user?{" "}
+          <Link className="text-blue-500" to="/register">
+            Register
+          </Link>
         </p>
       </div>
     </div>

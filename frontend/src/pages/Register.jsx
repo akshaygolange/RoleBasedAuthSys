@@ -1,58 +1,3 @@
-// import React, { useState } from "react";
-// import { registerUser } from "../services/api";
-// import { useNavigate } from "react-router-dom";
-
-// const Register = () => {
-//   const [username, setUsername] = useState("");
-//   const [email, setEmail] = useState("");
-//   const [password, setPassword] = useState("");
-//   const navigate = useNavigate();
-
-//   const handleRegister = async () => {
-//     try {
-//       await registerUser({ username, email, password });
-
-//       alert("Registered successfully ✅");
-//       navigate("/");
-//     } catch (err) {
-//       alert(err.message);
-//     }
-//   };
-
-//   return (
-//     <div>
-//       <h2>Register</h2>
-
-//       <input
-//         placeholder="Username"
-//         onChange={(e) => setUsername(e.target.value)}
-//       />
-//       <br />
-
-//       <input
-//         placeholder="Email"
-//         onChange={(e) => setEmail(e.target.value)}
-//       />
-//       <br />
-
-//       <input
-//         type="password"
-//         placeholder="Password"
-//         onChange={(e) => setPassword(e.target.value)}
-//       />
-//       <br />
-
-//       <button onClick={handleRegister}>Register</button>
-//     </div>
-//   );
-// };
-
-// export default Register;
-
-
-
-
-
 import React, { useState, useEffect } from "react";
 import { registerUser } from "../services/api";
 import { useNavigate, Link } from "react-router-dom";
@@ -110,7 +55,10 @@ const Register = () => {
         </button>
 
         <p className="text-sm mt-3 text-center">
-          Already have account? <Link className="text-blue-500" to="/">Login</Link>
+          Already have account?{" "}
+          <Link className="text-blue-500" to="/">
+            Login
+          </Link>
         </p>
       </div>
     </div>
